@@ -1,0 +1,11 @@
+{
+  "name": "scroll-animation",
+  "description": "Learning how to trigger animations on scroll. Code inspired by http://www.dangersoffracking.com/",
+  "version": "1.0.0",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  },
+  "authors": [
+      { "name" : "Tom Leo", "email": "tom@tomleo.com" }
+  ]
+}
