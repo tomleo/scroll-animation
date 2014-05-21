@@ -1,0 +1,56 @@
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #333;
+}
+
+div {   
+    margin: 1em; 
+}
+
+.effect { color: blue; }
+
+// Animation Example
+#e {
+    padding: 1.5em;
+    background: #00a0df;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.attention-animation {
+    animation-name: attention;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
+}
+
+@keyframes attention {
+    5% {
+        padding-top: 2em;
+        background: white;
+        color: #333;
+    }
+    70% {
+        color: white;
+    }
+}
+
+
+
+//Transition Example
+#f {
+    transition: all 1s linear;
+    background: grey;
+    padding: 1em;
+}
+
+#f.theEffect {
+    background: white;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+}
+

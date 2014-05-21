@@ -11,6 +11,25 @@ module.exports = function (grunt) {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
 
+    autoprefixer: {
+      dist: {
+        files: {
+          'styles/full.css': ['styles/main.css']
+        }
+      }
+    },
+
+    sass: {
+      dist: {
+        options: {
+          style: 'expanded'
+        },
+        files: {
+          'styles/main.css': 'styles/main.scss'
+        }
+      }
+    },
+
     connect: {
       server: {
         options: {
@@ -26,6 +45,14 @@ module.exports = function (grunt) {
       },
       target: {
         files: ['index.html', 'styles/**/*.css', 'scripts/**/*.js']
+      },
+      styles: {
+        files: ['styles/main.css'],
+        tasks: ['autoprefixer']
+      },
+      css: {
+        files: ['styles/main.scss'],
+        tasks: ['sass']
       }
     }
   });
